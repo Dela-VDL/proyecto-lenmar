@@ -1,0 +1,440 @@
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f4;
+    color: #202724;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: #34423a;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.seccion {
+    padding: 55px 0;
+}
+
+/* Cabecera y navegación */
+.cabecera {
+    background-color: #14211d;
+    color: white;
+}
+
+.cabecera-interior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    gap: 20px;
+}
+
+.marca {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.marca strong {
+    color: #d3bf99;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.menu a {
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s;
+}
+
+.menu a:hover, .menu .activo {
+    color: #d3bf99;
+    border-bottom-color: #d3bf99;
+}
+
+/* Portada: una sola fotografía, sin animaciones */
+.portada {
+    background-image: linear-gradient(rgba(12, 23, 19, 0.65), rgba(12, 23, 19, 0.65)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1900&q=85');
+    background-color: #303933;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 125px 0;
+}
+
+.portada h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.portada h1 em {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: #e1ccb1;
+}
+
+.portada p {
+    max-width: 550px;
+}
+
+.etiqueta {
+    color: #d3bf99;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* Botones y enlaces */
+.boton {
+    display: inline-block;
+    padding: 13px 23px;
+    border: none;
+    background-color: #263a30;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #445c4a;
+    transform: translateY(-2px);
+}
+
+.boton-claro {
+    background-color: #e5dfd1;
+    color: #202724;
+}
+
+.boton-claro:hover {
+    background-color: white;
+}
+
+.enlace {
+    display: inline-block;
+    color: #435b46;
+    text-decoration: underline;
+    margin-top: 12px;
+}
+
+.enlace:hover {
+    color: #8a794f;
+}
+
+/* Encabezados de las páginas interiores */
+.titulo-pagina {
+    background-color: #24352e;
+    color: white;
+    padding: 45px 0;
+}
+
+.titulo-pagina h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.titulo-pagina p {
+    color: #e5dfd1;
+    margin-bottom: 0;
+}
+
+/* Tarjetas de servicios y ventajas */
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.dos-columnas {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #dddeda;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(26, 38, 32, 0.15);
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.tarjeta-texto, .ventajas .tarjeta {
+    padding: 22px;
+}
+
+.tarjeta p {
+    color: #59645b;
+    margin-bottom: 8px;
+}
+
+.fondo-claro {
+    background-color: #eeefeb;
+}
+
+/* Tabla y preguntas frecuentes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+caption {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #59645b;
+}
+
+th, td {
+    border: 1px solid #cbd1c8;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #34423a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eeefeb;
+}
+
+tbody tr:hover {
+    background-color: #e5dfd1;
+}
+
+.separacion {
+    margin-top: 45px;
+}
+
+.pasos li {
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+details {
+    background-color: white;
+    border: 1px solid #dddeda;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+summary:hover {
+    color: #7f8977;
+}
+
+details p {
+    margin-bottom: 0;
+}
+
+/* Formulario de contacto */
+.contacto-rejilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.formulario {
+    background-color: white;
+    border: 1px solid #dddeda;
+    padding: 25px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.formulario input, .formulario select, .formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #bfc6bb;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.formulario input:focus, .formulario select:focus, .formulario textarea:focus {
+    outline: 2px solid #7f8977;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.aviso {
+    font-size: 12px;
+    color: #59645b;
+    margin-bottom: 0;
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    background-color: #14211d;
+    color: #e5dfd1;
+    padding: 20px;
+    font-size: 13px;
+}
+
+.pie-pagina p {
+    margin: 5px 0;
+}
+
+.pie-pagina a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+/* Adaptación a tablets */
+@media (max-width: 800px) {
+
+    .cabecera-interior {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .rejilla {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-rejilla {
+        grid-template-columns: 1fr;
+    }
+
+    .portada {
+        padding: 80px 0;
+    }
+
+    .portada h1 {
+        font-size: 36px;
+    }
+}
+
+/* Adaptación a móviles */
+@media (max-width: 480px) {
+
+    .contenedor {
+        width: 92%;
+    }
+
+    .marca {
+        font-size: 20px;
+    }
+
+    .menu {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .portada {
+        padding: 65px 0;
+        text-align: center;
+    }
+
+    .portada h1 {
+        font-size: 30px;
+    }
+
+    .portada p {
+        font-size: 15px;
+    }
+
+    .rejilla, .dos-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 30px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 28px;
+    }
+
+    .tarjeta img {
+        height: 200px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .pie-pagina {
+        font-size: 12px;
+    }
+}
+
